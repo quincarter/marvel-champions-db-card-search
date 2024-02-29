@@ -66,6 +66,7 @@ function Cards() {
         </h1>
         <div className="controls">
           <input
+          placeholder="Search for the Name of a Card"
             type="search"
             onInput={(e: any) => filterData(e?.target?.value)}
           />
