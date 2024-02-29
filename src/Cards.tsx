@@ -65,11 +65,6 @@ function Cards() {
                 .pack_name}
         </h1>
         <div className="controls">
-          <input
-          placeholder="Search for the Name of a Card"
-            type="search"
-            onInput={(e: any) => filterData(e?.target?.value)}
-          />
           <select
             defaultValue={"core"}
             onChange={(e) => setPackSelect(e.target.value)}
@@ -77,6 +72,11 @@ function Cards() {
             <option value="all">Show All (May Load Slowly)</option>
             {packFilter}
           </select>
+          <input
+            placeholder="Search for the Name of a Card"
+            type="search"
+            onInput={(e: any) => filterData(e?.target?.value)}
+          />
         </div>
 
         <div className="card-container">{cards}</div>
